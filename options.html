@@ -1,0 +1,65 @@
+<div href="#/options">
+  <h2 style="text-align:center">Tell us what you want!</h2>
+  <div class="row">
+    <div class="option-tab col-md-4" style="border: 1px solid black; margin-left:15%;">
+      <h3>Individual Package</h3>
+      <h5>For those who drink alone</h5>
+      <img src="img/solo-drinker.jpg" height="200px" width="300px">
+        <table>
+        <tr>
+          <td><h5>Cups:</h5></td>
+          <td><input type="text"></input></td>
+        </tr>
+        <tr>
+          <td><h5>Price per cup:</h5></td>
+        </tr>
+        <tr>
+          <td><h5>Total:</h5></td>
+        </tr>
+        <tr>
+          <td><h5>Grind type:</h5></td>
+          <td><select>
+            <option ng-repeat="option in options">
+              {{option}}
+            </option>
+        </select>
+      </td>
+        </tr>
+        </table>
+      <button type="button">Order</button>
+
+    </div>
+    <div class="col-md-4 option-tab" style="border: 1px solid black; margin-left:10%;">
+      <h3>Family Package</h3>
+      <h5>For those who drink together</h5>
+      <img src="img/coffee-drinkers.jpg" height="200px" width="300px">
+      <table>
+      <tr>
+        <td><h5>Cups:</h5></td>
+        <td><input type="text"></input></td>
+      </tr>
+      <tr>
+        <td><h5>Price per cup:</h5></td>
+      </tr>
+      <tr>
+        <td><h5>Total:</h5></td>
+      </tr>
+      <tr>
+        <td><h5>Grind type:</h5></td>
+        <td><select>
+        <option value="{{options[0]}}"> {{options[0]}}</option>
+        <option value="{{options[1]}}"> {{options[1]}}</option>
+        <option value="{{options[2]}}"> {{options[2]}}</option>
+        <option value="{{options[3]}}"> {{options[3]}}</option>
+        <option value="{{options[4]}}"> {{options[4]}}</option>
+        <option value="{{options[5]}}"> {{options[5]}}</option>
+        <option value="{{options[6]}}"> {{options[6]}}</option>
+      </select>
+    </td>
+      </tr>
+      </table>
+    <button type="button">Order</button>
+      </div>
+    </div>
+  </div>
+</div>

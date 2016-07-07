@@ -1,0 +1,22 @@
+#topBanner{
+  background-color: black;
+}
+#navOptions{
+  background-color: gray;
+}
+#navOptions li {
+  display: inline;
+  color: black;
+  margin-right: 20%;
+  text-align: center;
+  font-size: 1em;
+}
+a{
+  color: white;
+}
+.option-tab {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
