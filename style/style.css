@@ -20,3 +20,23 @@ a{
   flex-direction: column;
   align-items: center;
 }
+.rightAlign{
+  text-align: right;
+}
+.leftAlign{
+  text-align: left;
+  margin-left: 10px;
+}
+
+.orderbtn{
+  background-color: #003300;
+  color:white;
+  margin-bottom: 5px;
+}
+.addressForm{
+margin-left: 30%;
+}
+.addresssFormTitle{
+  margin-left: 10%;
+  margin-top: 5%;
+}
