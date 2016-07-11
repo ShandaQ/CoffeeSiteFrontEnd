@@ -142,3 +142,29 @@ margin-left: 30%;
 .cancelBtn{
   background-color: light gray;
 }
+
+/*************
+ login
+**************/
+.loginBox {
+  margin-top: 150px;
+  margin-left: 320px;
+}
+.loginBox2 {
+  padding-bottom: 20px;
+  background-color: #f1e7da;
+  width: 300px;
+  box-shadow: 1px 5px 5px #888888;
+}
+h3 {
+  text-align: center;
+}
+.loginbutton {
+  text-align: center;
+  margin-left: 110px
+}
+hr {
+  background-color:#003300;
+  height: 1px;
+  border: 0;
+}
