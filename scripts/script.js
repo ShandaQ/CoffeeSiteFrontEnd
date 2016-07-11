@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute','ngCookies']);
 
 var API = 'http://localhost:8000';
 var order = {
@@ -15,11 +15,15 @@ var address = {
   zipCode: null,
   deliveryDate: null
 };
+var credentials = {
+  username: null,
+  pswd: null
+};
 
 app.config(function($routeProvider){
     $routeProvider
 
-    .when('/', {
+    .when('/home', {
       controller: 'MainController',
       templateUrl: 'home.html'
     })
@@ -42,6 +46,18 @@ app.config(function($routeProvider){
       controller: 'thankyouController',
       templateUrl: 'thankyou.html'
     })
+    .when('/login',{
+      controller: 'loginController',
+      templateUrl: 'login.html'
+    })
+    .when('/register',{
+      controller: 'registerController',
+      templateUrl: 'register.html'
+    })
+    .when('/succesfullLogin',{
+      controller: 'succesfullLoginController',
+      templateUrl: 'succesfullLogin.html'
+    });
 });
 
 
@@ -84,7 +100,7 @@ app.controller('deliveryController', function($scope, $http, $location){
 });
 
 app.controller('paymentController', function($scope, $http, $location){
-
+// getting the infomraiton from the global var and displaying it on the page
    $scope.name = address.name;
    $scope.address = address.address;
    $scope.address2 = address.address2;
@@ -102,5 +118,58 @@ app.controller('paymentController', function($scope, $http, $location){
 });
 
 app.controller('thankyouController', function($scope, $http){
-  
+
+});
+
+app.controller('loginController', function($scope, $http, $location, $cookies){
+  $scope.login = function(){
+    var credentials = {
+      username: "",
+      password:""
+    };
+
+    credentials.username = $scope.username;
+    credentials.password = $scope.password;
+
+    $http.post(API+"/login", credentials)
+      .success(function(data){
+        console.log(data);
+        $cookies.put("token",data.token);
+        $location.path('/home');
+    })
+    .catch(function(err){
+      $scope.errorMessage = err.data.message;
+      console.log(err.data.message);
+    });
+  };
+});
+
+app.controller('registerController', function($scope, $http, $location){
+
+  $scope.register = function(){
+    // want to pass the username to the db
+    // want encrypt the pswd - pass it to the db
+
+// setting global var from user input
+    credentials.username = $scope.username;
+    credentials.password = $scope.password;
+
+    $http.post(API + '/signup',credentials)
+      .success(function(){
+        //account created message and prompt them to go the the login back
+        // $location.path('/succesfullLogin');
+        $location.path('/succesfullLogin');
+      })
+      .catch(function(err){
+        console.log(err.message);
+      });
+
+  };
+});
+
+app.controller('succesfullLoginController', function($scope, $http, $location){
+
+  $scope.goToLoginPage = function(){
+    $location.path('/login');
+  };
 });
