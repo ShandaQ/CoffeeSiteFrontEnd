@@ -54,7 +54,9 @@ margin-left: 30%;
   margin-top: 5%;
 }
 
-/* home page styling */
+/*******************
+ home page styling
+********************/
 .coffee{
   background: url("/img/coffee.jpg");
   background-repeat: no-repeat;
@@ -92,14 +94,10 @@ margin-left: 30%;
   transform: rotate(10deg);
   margin-top: 100px;
   margin-left: 60px;
-  /*display: inline-block;*/
-  /*width: 400px;*/
 }
 .growerText{
   margin-left: 50%;
-  /*padding-left: 0px;*/
   margin-top: -197px;
-  /*display: inline-block;*/
 }
 .cupSteam{
   background: url("/img/cup-steam.jpg");
@@ -107,10 +105,40 @@ margin-left: 30%;
   background-size: cover;
   height: 400px;
   background-position: 100% 35%;
-  /*background-size: 500px 610px;*/
 }
 .cupSteamText{
   color: white;
   margin-top: 125px;
   margin-left: 80px;
+}
+
+/*******************
+    Payment Page
+*******************/
+.orderReview{
+  background-color: rgb(236, 236, 236);
+}
+.title{
+  text-align: center;
+}
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 700px;
+    height: 250px;
+    background-color: lightgrey;
+    margin-left: 25%;
+    -webkit-align-items: center; /* Safari */
+    align-items: center;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 170px;
+    height: 25px;
+    margin: 10px;
+}
+
+.cancelBtn{
+  background-color: light gray;
 }
