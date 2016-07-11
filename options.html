@@ -8,17 +8,7 @@
         <table>
         <tr>
           <td class="rightAlign"><h5>Quantity(lbs):</h5></td>
-          <td class="lefttAlign">
-            <select ng-model= "order.quantity">
-              <option value="5">5</option>
-              <option value="10">10</option>
-              <option value="15">15</option>
-              <option value="20">20</option>
-              <option value="25">25</option>
-              <option value="30">30</option>
-            </select>
-            <!-- <input type="text"></input></td> -->
-          </td>
+          <td class="lefttAlign">14</td>
         </tr>
         <tr>
           <td class="rightAlign"><h5>Price per pound:</h5></td>
@@ -26,20 +16,20 @@
         </tr>
         <tr>
           <td class="rightAlign"><h5>Total:</h5></td>
-          <td class="lefttAlign" ng-model= "total">${{total}}</td>
+          <td class="lefttAlign" ng-model= "total">$7.00</td>
         </tr>
         <tr>
           <td class="rightAlign"><h5>Grind type:</h5></td>
           <td class="lefttAlign">
-            <select ng-model= "order.grind">
-              <option ng-repeat="option in options">
+            <select ng-model= "grindIndividual">
+              <option ng-repeat="option in options" value="{{option}}">
                 {{option}}
               </option>
             </select>
           </td>
         </tr>
       </table>
-      <button class="btn orderbtn" ng-click="goToDelivery()"  type="submit">Order</button>
+      <button class="btn orderbtn" ng-click="goToDelivery(grindIndividual, 14, 7)"  type="submit">Order</button>
 
     </div>
     <div class="col-md-4 option-tab" style="border: 1px solid gray;box-shadow: 0px 0px 50px #888, 0px 0px 0px #888; margin-left:10%;">
@@ -49,40 +39,28 @@
       <table>
       <tr>
         <td class="rightAlign"><h5>Quantity(lbs):</h5></td>
-        <td class="lefttAlign">
-            <select ng-model= "order.quantity" >
-              <option value="30">30</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
-              <option value="150">150</option>
-              <option value="200">200</option>
-              <option value="350">350</option>
-            </select>
-        </td>
+        <td class="lefttAlign"> 40</td>
       </tr>
       <tr>
         <td class="rightAlign"><h5>Price per pounds:</h5></td>
-        <td class="lefttAlign"> $0.50</td>
+        <td class="lefttAlign"> $0.45</td>
       </tr>
       <tr>
         <td class="rightAlign"><h5>Total:</h5></td>
-        <td class="lefttAlign" ng-model= "total">${{total}}</td>
+        <td class="lefttAlign" ng-model= "total">$18.00</td>
       </tr>
       <tr>
         <td class="rightAlign"><h5>Grind type:</h5></td>
         <td class="lefttAlign">
-          <select ng-model= "order.grind">
-            <option ng-repeat="option in options">
+          <select ng-model= "grindFamily">
+            <option ng-repeat="option in options" value="{{option}}">
               {{option}}
             </option>
           </select>
         </td>
       </tr>
       </table>
-    <button class="btn orderbtn" ng-click="goToDelivery()" type="submit">Order</button>
+    <button class="btn orderbtn" ng-click="goToDelivery(grindFamily,40,18)" type="submit">Order</button>
       </div>
     </div>
   </div>
-
-  {{order}}
-  {{total}}
