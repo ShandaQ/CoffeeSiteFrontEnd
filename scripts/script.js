@@ -38,6 +38,10 @@ app.config(function($routeProvider){
       controller:  'paymentController',
       templateUrl: 'payment.html'
     })
+    .when('/thankyou', {
+      controller: 'thankyouController',
+      templateUrl: 'thankyou.html'
+    })
 });
 
 
@@ -79,6 +83,24 @@ app.controller('deliveryController', function($scope, $http, $location){
   };
 });
 
-app.controller('paymentController', function($scope, $http){
+app.controller('paymentController', function($scope, $http, $location){
 
+   $scope.name = address.name;
+   $scope.address = address.address;
+   $scope.address2 = address.address2;
+   $scope.city = address.city;
+   $scope.state = address.state;
+   $scope.zipCode = address.zipCode;
+   $scope.deliveryDate = address.deliveryDate;
+   $scope.grind = order.grind;
+   $scope.quantity = order.quantity;
+   $scope.total = order.total;
+
+   $scope.showPayment = function(){
+     $location.path('/thankyou');
+   };
+});
+
+app.controller('thankyouController', function($scope, $http){
+  
 });

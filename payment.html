@@ -1,8 +1,86 @@
-<div class="orderReview" href="#/payment">
-  <div class="title">
-    <h3>Payment</h3>
-  </div>
-  <div class="choices">
-    <h3>Choices (Edit)</h3>
-  </div>
+<div class="row orderReview" href="#/payment">
+  <div class="col-md-12">
+    <div class="title">
+      <h3>Payment</h3>
+    </div>
+  <div class="everything">
+    <div class="choices">
+      <div class="flex-container orderDetails">
+        <h3>Choices (Edit)</h3>
+      </div>
+      <div class="order">
+        <div class="flex-container orderDetails">
+          <h5 class="flex-item">Grind</h5>
+          <h5 class="flex-item">{{order.grind}}</h5>
+        </div>
+        <div class="flex-container orderDetails">
+          <h5 class="flex-item">Frequency of Delivery</h5>
+          <h5 class="flex-item">Monthly</h5>
+        </div>
+        <div class="flex-container orderDetails">
+          <h5 class="flex-item">Coffee in Pounds</h5>
+          <h5 class="flex-item">{{quantity}}</h5>
+        </div>
+      </div>   <!-- end order -->
+    </div> <!-- end choices -->
+<!-- delivery info -->
+    <div class="deliveryInformation">
+      <div class="flex-container deliveryDetails">
+        <h3>Delivery Information (Edit)</h3>
+      </div>
+      <div class="flex-container deliveryDetails">
+        <h5 class="flex-item">Full Name</h5>
+        <h5 class="flex-item">{{name}}</h5>
+      </div>
+      <div class="flex-container deliveryDetails">
+        <h5 class="flex-item">Address</h5>
+        <h5 class="flex-item">{{address}}</h5>
+      </div>
+      <div class="flex-container deliveryDetails">
+        <h5 class="flex-item">Address2</h5>
+        <h5 class="flex-item">{{address2}}</h5>
+      </div>
+      <div class="flex-container deliveryDetails">
+        <h5 class="flex-item">City</h5>
+        <h5 class="flex-item">{{city}}</h5>
+      </div>
+      <div class="flex-container deliveryDetails">
+        <h5 class="flex-item">State</h5>
+        <h5 class="flex-item">{{state}}</h5>
+      </div>
+      <div class="flex-container deliveryDetails">
+        <h5 class="flex-item">Zip Code</h5>
+        <h5 class="flex-item">{{zipCode}}</h5>
+      </div>
+      <div class="flex-container deliveryDetails">
+        <h5 class="flex-item">Delivery Date</h5>
+        <h5 class="flex-item">{{deliveryDate}}</h5>
+      </div>
+    </div> <!-- end Delivery info -->
+<!-- Current Charges -->
+    <div class="charges">
+      <div class="flex-container currentCharges">
+        <h5 class="flex-item">Quantity</h5>
+        <h5 class="flex-item">{{quantity}} x $20.00/lb = ${{total}}</h5>
+        <!-- {{qty}} x pricePerPound = {{total}} -->
+      </div>
+      <div class="flex-container currentCharges">
+        <h5 class="flex-item">Shipping</h5>
+        <h5 class="flex-item">FREE!</h5>
+      </div>
+      <div class="flex-container currentCharges">
+        <h5 class="flex-item">Total</h5>
+        <h5 class="flex-item">${{total}}</h5>
+        <!-- {{total}} -->
+      </div>
+    </div> <!-- end charges -->
+<!-- submit btn -->
+    <div class="checkout">
+      <div class="flex-container currentCharges">
+        <button type="submit" class="btn orderbtn" ng-click="showPayment()">Pay with Credit Card</button>
+        <button type="submit" class="btn cancelBtn">Cancel</button>
+      </div>
+    </div> <!-- end submit btn -->
+</div> <!--end everything -->
+  </div> <!-- end col md 12 -->
 </div>
