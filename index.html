@@ -16,17 +16,19 @@
 
   </head>
   <body ng-app="app">
-    <div  id="topBanner">
-    <img src="/img/dc-roasters.png" height="50px" width="80px">
-  </div>
+    <div class="row">
+    <div class="topBanner">
+      <img src="/img/dc-roasters.png" height="50px" width="80px">
+    </div>
     <div id="navOptions" class="col-md-12">
       <ol>
-        <li><a href="#/home">HOME</a></li>
+        <li><a href="#/">HOME</a></li>
         <li><a href="#/options">OPTIONS</a></li>
         <li><a href="#/delivery">DELIVERY</a></li>
         <li><a href="#/payment">PAYMENT</a></li>
       </ol>
     </div>
-    <ng-view></ng-view>
+  </div>
+  <ng-view></ng-view>
   </body>
 </html>

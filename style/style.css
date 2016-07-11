@@ -1,8 +1,16 @@
-#topBanner{
+.topBanner{
   background-color: black;
+  background-repeat: no-repeat;
+}
+.topBanner img{
+  margin-left: 2%;
+  margin-bottom: 4px;
 }
 #navOptions{
-  background-color: gray;
+  background-color: black;
+  border-top: 1px solid white;
+  padding-right: 1px;
+  right: 0px;
 }
 #navOptions li {
   display: inline;
@@ -10,6 +18,11 @@
   margin-right: 20%;
   text-align: center;
   font-size: 1em;
+}
+#navOptions ol{
+  margin-top: 7px;
+  margin-left: 47px;
+  padding-left: 54px;
 }
 a{
   color: white;
@@ -19,4 +32,85 @@ a{
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+.rightAlign{
+  text-align: right;
+}
+.leftAlign{
+  text-align: left;
+  margin-left: 10px;
+}
+
+.orderbtn{
+  background-color: #003300;
+  color:white;
+  margin-bottom: 5px;
+}
+.addressForm{
+margin-left: 30%;
+}
+.addresssFormTitle{
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+/* home page styling */
+.coffee{
+  background: url("/img/coffee.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 70%;
+  height: 400px;
+}
+.coffeeText{
+  margin-top: 140px;
+  margin-left: 50px;
+}
+.coffeeBags{
+  background: url("/img/coffee-bags.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 70%;
+  height: 400px;
+}
+.coffeeBagsText{
+  color: white;
+  margin-top: 140px;
+  margin-left: 50px;
+}
+.coffeeBagsSubText{
+  margin-left: 52px;
+}
+.grower{
+  display: inline-block;
+  height: 400px;
+  background-color: gray;
+}
+.growerImg img{
+  width: 400px;
+  border: 5px solid white;
+  transform: rotate(10deg);
+  margin-top: 100px;
+  margin-left: 60px;
+  /*display: inline-block;*/
+  /*width: 400px;*/
+}
+.growerText{
+  margin-left: 50%;
+  /*padding-left: 0px;*/
+  margin-top: -197px;
+  /*display: inline-block;*/
+}
+.cupSteam{
+  background: url("/img/cup-steam.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  background-position: 100% 35%;
+  /*background-size: 500px 610px;*/
+}
+.cupSteamText{
+  color: white;
+  margin-top: 125px;
+  margin-left: 80px;
 }
