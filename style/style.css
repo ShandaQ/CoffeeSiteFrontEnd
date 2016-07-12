@@ -46,6 +46,11 @@ a{
   color:white;
   margin-bottom: 5px;
 }
+.order{
+  margin-bottom: 3%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
 
 /**************
   Delivery Page
@@ -175,10 +180,42 @@ h3 {
 }
 .loginbutton {
   text-align: center;
-  margin-left: 110px
+  margin-left: 35%;
 }
 hr {
   background-color:#003300;
   height: 1px;
   border: 0;
+}
+/*************
+ thankyou page
+***************/
+.thankyou-box{
+  border: 1px solid gray;
+  box-shadow: 0px 0px 25px #888, 0px 0px 0px #888;
+  margin-left: 32%;
+  margin-top: 3%;
+}
+.thankyouText{
+  text-align: center;
+}
+
+.greenCheck{
+  margin: 15%;
+}
+/*****************************************************
+ succvessulllogin
+ (really succssfully created a username and pswd) page
+******************************************************/
+.createsAccount-box{
+  border: 1px solid gray;
+  box-shadow: 0px 0px 25px #888, 0px 0px 0px #888;
+  margin-left: 32%;
+  margin-top: 3%;
+}
+.createsAccountText{
+  text-align: center;
+}
+.greenCheck{
+  margin: 15%;
 }
