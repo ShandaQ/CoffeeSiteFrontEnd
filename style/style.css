@@ -15,7 +15,7 @@
 #navOptions li {
   display: inline;
   color: black;
-  margin-right: 20%;
+  margin-right: 12%;
   text-align: center;
   font-size: 1em;
 }
@@ -46,12 +46,16 @@ a{
   color:white;
   margin-bottom: 5px;
 }
-.addressForm{
-margin-left: 30%;
+
+/**************
+  Delivery Page
+**************/
+.addressDetails{
+margin-left: 25%;
 }
 .addresssFormTitle{
-  margin-left: 10%;
-  margin-top: 5%;
+  /*margin-left: 10%;*/
+  margin-top: 4%;
 }
 
 /*******************
@@ -110,6 +114,16 @@ margin-left: 30%;
   color: white;
   margin-top: 125px;
   margin-left: 80px;
+}
+
+.getStarted{
+  background-size: cover;
+  height: 400px;
+  background-color: gray;
+}
+.getStartedText{
+  text-align: center;
+  margin-top: 12%;
 }
 
 /*******************
