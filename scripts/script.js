@@ -224,7 +224,7 @@ app.controller('registerController', function($scope, $http, $location){
         $location.path('/succesfullLogin');
       })
       .catch(function(err){
-        console.log(err.message);
+        console.error(err.message);
       });
 
   };
