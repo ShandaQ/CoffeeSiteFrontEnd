@@ -6,6 +6,9 @@
   margin-left: 2%;
   margin-bottom: 4px;
 }
+.navbar-nav{
+  margin-left: 25%;
+}
 #navOptions{
   background-color: black;
   border-top: 1px solid white;
@@ -174,11 +177,14 @@ margin-left: 25%;
  login
 **************/
 .loginBox {
-  margin-top: 150px;
-  margin-left: 320px;
+  /*margin-top: 150px;*/
+  /*margin-left: 320px;*/
+  margin-left: 38%;
+  margin-top: 10%;
 }
 .loginBox2 {
   padding-bottom: 20px;
+  padding-top: 2%;
   background-color: #f1e7da;
   width: 300px;
   box-shadow: 1px 5px 5px #888888;
@@ -228,13 +234,8 @@ hr {
   margin: 15%;
 }
 
-@media (max-width: 611px)  {
-  .coffeeText{
-    margin-top: 40px;
-  }
-}
 
-@media (max-width: 991px)  {
+@media (max-width: 992px)  {
   .growerImg img{
     width: 200px;
     transform: rotate(1deg);
@@ -248,10 +249,36 @@ hr {
     margin-top: -215px;
     font-size: 1em;
   }
+  .navbar-nav{
+    margin-left: 18%;
+  }
+}
+
+@media (max-width: 767px)  {
+  .navbar-nav{
+    margin-left: -4%;
+  }
+
+}
+
+@media (max-width: 611px)  {
+  .coffeeText{
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 497px){
   .growerText{
     font-size: 12px;
   }
+  .cupSteam{
+    background-position: 57% 35%;
+  }
+  .cupSteamText{
+    margin-left: -1%;
+    margin-top: 3%;
+  }
+  /*.loginBox{
+    align-items: center;
+  }*/
 }
