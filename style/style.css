@@ -139,7 +139,7 @@ margin-left: 25%;
 }
 .getStartedText{
   text-align: center;
-  margin-top: 12%;
+  margin-top: 10%;
 }
 
 /*******************
@@ -180,7 +180,7 @@ margin-left: 25%;
   /*margin-top: 150px;*/
   /*margin-left: 320px;*/
   margin-left: 38%;
-  margin-top: 10%;
+  margin-top: 6%;
 }
 .loginBox2 {
   padding-bottom: 20px;
@@ -258,12 +258,21 @@ hr {
   .navbar-nav{
     margin-left: -4%;
   }
+  .loginBox2{
+    margin-left: -7%;
+  }
 
 }
 
 @media (max-width: 611px)  {
   .coffeeText{
     margin-top: 40px;
+  }
+  .getStartedText{
+    margin-top: 25%;
+  }
+  .loginBox2{
+    margin-left: -15%;
   }
 }
 
@@ -278,7 +287,10 @@ hr {
     margin-left: -1%;
     margin-top: 3%;
   }
-  /*.loginBox{
-    align-items: center;
-  }*/
+  .getStartedText{
+    margin-top: 35%;
+  }
+  .loginBox2{
+    margin-left: -30%;
+  }
 }
